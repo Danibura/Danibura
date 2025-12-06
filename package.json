@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://danibura.github.io/",
+  "homepage": "https://danibura.github.io/Danibura",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
