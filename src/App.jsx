@@ -1,4 +1,3 @@
-import { useState } from "react";
 import me from "./assets/Rheinpark.jpg";
 import linkedin from "./assets/social/linkedin.svg";
 import instagram from "./assets/social/instagram.svg";
@@ -14,6 +13,9 @@ import express from "./assets/languages/express.svg";
 import react from "./assets/languages/react.svg";
 import html from "./assets/languages/html.svg";
 import mongo from "./assets/languages/mongo.svg";
+import php from "./assets/languages/php.svg";
+import mysql from "./assets/languages/MySQL.svg";
+import forum from "./assets/covers/forum.png";
 
 function App() {
   const tiltRef = useRef(null);
@@ -23,7 +25,6 @@ function App() {
     if (!el) return;
 
     const maxTilt = 20;
-    const glare = 0.8;
 
     const updateTilt = (x, y) => {
       const rect = el.getBoundingClientRect();
@@ -43,9 +44,8 @@ function App() {
 
       const glareX = (px + 1) * 50;
       const glareY = (py + 1) * 50;
-      el.querySelector(
-        ".glare"
-      ).style.background = `radial-gradient(circle at ${glareX}% ${glareY}%, rgba(255,255,255,0.1) 0%, transparent 80%)`;
+      el.querySelector(".glare").style.background =
+        `radial-gradient(circle at ${glareX}% ${glareY}%, rgba(255,255,255,0.1) 0%, transparent 80%)`;
     };
 
     const handleMouseMove = (e) => updateTilt(e.clientX, e.clientY);
@@ -148,6 +148,26 @@ function App() {
                 <img src={node} alt="node" width="30" />
                 <img src={express} alt="express" width="30" />
                 <img src={mongo} alt="mongo" width="30" />
+              </div>
+            </div>
+          </a>
+          <a href="http://forumphp.rf.gd/">
+            <div className="bg-stone-900 rounded-2xl text-left text-stone-100 border border-stone-100 mt-4 md:mt-8 hover:shadow-lg shadow-sky-500/10 w-full pb-2 md:pb-4">
+              <img
+                src={forum}
+                alt="forum"
+                className="bg-clip-padding h-50 w-full rounded-2xl"
+              />
+              <h2 className="text-2xl md:text-3xl mt-2 ml-4">Forum</h2>
+              <p className="text-md md:text-lg md:mt-1 ml-4 mb-2">
+                A forum with user and admin functions
+              </p>
+              <div className="flex flex-wrap mx-4 gap-3">
+                <img src={html} alt="html" width="30" />
+                <img src={css} alt="css" width="30" />
+                <img src={js} alt="js" width="30" />
+                <img src={php} alt="php" width="30" />
+                <img src={mysql} alt="mysql" width="30" />
               </div>
             </div>
           </a>
